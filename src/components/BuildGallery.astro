@@ -1,0 +1,23 @@
+---
+import json from '../assets/json/gallery.json'
+---
+
+{
+    json['categories']?.map(({ name }, i) => (
+        <button class={name === 'All' ? "btn-filter btn-filter-active" : "btn-filter"} data-category={name} onclick={"filter('" + name + "')"}>
+            {name}
+        </button>
+        <span class="btn-filter btn-filter-seperator" style="padding: 20px;">|</span>
+     ))
+}
+<br />
+<br />
+<div class="row gy-4 gallery">
+    {
+        json['gallery']?.map(({path, caption, category }) => (
+            <div class="col-md-4 gallery-container" data-category={category} data-fancybox data-src={path} data-caption={caption}>
+                <img src={path} class="img-fluid" />
+            </div>
+        ))
+    }
+</div>

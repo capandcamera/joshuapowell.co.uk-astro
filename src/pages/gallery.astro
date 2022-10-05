@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import BuildGallery from '../components/BuildGallery.astro'
+---
+
+<Layout title='Gallery' description='Joshua Powell Photography - Gallery'>
+    <div class="container">
+        <div class="alert alert-dark alert-dismissible fade show" role="alert">
+            <strong>Note:</strong> Images are displayed in a low resolution
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+          </div>
+        <BuildGallery/>
+    </div>
+    <script>
+        $('.btn-filter-seperator:last').hide()
+    </script>
+</Layout>
