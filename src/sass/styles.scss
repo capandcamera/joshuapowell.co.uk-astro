@@ -8,7 +8,7 @@ $color-secondary: #929aab;
 $color-background: #f7f7f7;
 
 $header-height: 50px;
-$footer-height: 50px;
+$footer-height: 30px;
 
 body {
     -webkit-transition-timing-function: ease;
@@ -24,11 +24,13 @@ body {
 
   .navbar-brand,
   .navbar-nav {
+    padding-left: 5px;
     font-family: $font-family-primary;
     color: $color-primary;
     background-color: $color-background;
     font-weight: 700;
     text-transform: uppercase;
+    font-size: 1rem;
   }
   .nav-link {
     color: $color-secondary;
@@ -49,7 +51,7 @@ body {
   .container {
     margin-top: $header-height;
     margin-bottom: calc($footer-height * 2);
-    min-height: calc(100vh - 160px)
+    min-height: calc(100vh - calc($header-height + ($footer-height * 2) + 10px))
 
   }
 
@@ -117,7 +119,7 @@ body {
     font-family: $font-family-secondary;
     color: $color-primary;
     text-align: end;
-    font-size: 0.75rem;
+    font-size: 0.6rem;
     /* Set the fixed height of the footer here */
     height: $footer-height;
     background-color: $color-background;
