@@ -41,4 +41,5 @@ Icon?
 # Project Specific                     #
 ########################################
 public/assets/photos/
+public/assets/thumbnails/
 package-lock.json

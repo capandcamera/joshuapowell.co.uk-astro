@@ -12,55 +12,55 @@
   ],
   "gallery": [
     {
-      "path": "/assets/photos/Lucozade Energy Cherry Blast.png",
+      "filename":"Lucozade Energy Cherry Blast.png",
       "caption": "Lucozade Energy Cherry Blast",
       "category": "Products (Non-Commissioned)"
     },
     {
-      "path": "/assets/photos/Hugo Boss Sedare Essential.png",
+      "filename": "Hugo Boss Sedare Essential.png",
       "caption": "Hugo Boss Sedare Essential",
       "category": "Products (Non-Commissioned)"
     },
     {
-      "path": "/assets/photos/Apple Watch Series 7.png",
+      "filename": "Apple Watch Series 7.png",
       "caption": "Apple Watch (Series 7)",
       "category": "Products (Non-Commissioned)"
     },
     {
-      "path": "/assets/photos/Chanel Coco Mademoiselle Travel Perfume.png",
+      "filename": "Chanel Coco Mademoiselle Travel Perfume.png",
       "caption": "Chanel Coco Mademoiselle Travel Perfume",
       "category": "Products (Non-Commissioned)"
     },
 
     {
-      "path": "/assets/photos/Prada Luna Rossa Ocean EDP.png",
+      "filename": "Prada Luna Rossa Ocean EDP.png",
       "caption": "Luna Rossa Ocean (Prada)",
       "category": "Products (Non-Commissioned)"
     },
 
     {
-      "path": "/assets/photos/Prada Americas Cup.png",
-      "caption": "Prada Americas Cup",
+      "filename": "Prada Americas Cup.png",
+      "caption": "Prada America's Cup",
       "category": "Products (Non-Commissioned)"
     },
     {
-      "path": "/assets/photos/Mulberry Card Wallet Orange.png",
+      "filename": "Mulberry Card Wallet Orange.png",
       "caption": "Mulberry Card Wallet Orange",
       "category": "Products (Non-Commissioned)"
     },
     {
-      "path": "/assets/photos/DSC02243.jpg",
+      "filename": "DSC02243.png",
       "caption": "Moon",
       "category": "Astrophotography"
     },
     {
-      "path": "/assets/photos/MoonStack_20210717.jpg",
-      "caption": "Moon",
+      "filename": "MoonStack_20210717.png",
+      "caption": "Moon - 17th July 2021",
       "category": "Astrophotography"
     },
     {
-      "path": "/assets/photos/MoonStack_20210922.jpg",
-      "caption": "Moon",
+      "filename": "MoonStack_20210922.png",
+      "caption": "Moon - 22nd September 2021",
       "category": "Astrophotography"
     }
 
