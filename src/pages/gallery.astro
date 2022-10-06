@@ -13,5 +13,24 @@ import BuildGallery from '../components/BuildGallery.astro'
     </div>
     <script>
         $('.btn-filter-seperator:last').hide()
+
+        if (localStorage.galleryFilter) {
+        document.documentElement.setAttribute("gallery-filter", localStorage.galleryFilter);
+        filter(localStorage.galleryFilter)
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function () {
+
+        if (localStorage.getItem("gallery-position") != null) {
+            $(window).scrollTop(localStorage.getItem("gallery-position"));
+        }
+
+        $(window).on("scroll", function() {
+            localStorage.setItem("gallery-position", $(window).scrollTop());
+        });
+
+      });
     </script>
 </Layout>

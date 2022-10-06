@@ -14,9 +14,14 @@ import json from '../assets/json/gallery.json'
 <br />
 <div class="row gy-4 gallery">
     {
-        json['gallery']?.map(({filename, caption, category }) => (
-            <div class="col-md-4 gallery-container" data-category={category} data-fancybox data-src={'/assets/photos/' + filename} data-caption={caption}>
-                <img src={'/assets/thumbnails/' + filename} class="img-fluid" />
+        json['gallery']?.map(({filename, project, category }) => (
+            // <div class="col-md-4 gallery-container" data-category={category} data-fancybox data-src={'/assets/photos/' + filename} data-caption={caption}>
+            //     <img src={'/assets/thumbnails/' + filename} class="img-fluid" />
+            // </div>
+            <div class="col-md-4 gallery-container" data-category={category}>
+                <a href={'/gallery/' + project}>
+                    <img src={'/assets/thumbnails/' + filename} class="img-fluid" />
+                </a>
             </div>
         ))
     }

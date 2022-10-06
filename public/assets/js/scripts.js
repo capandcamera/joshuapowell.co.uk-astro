@@ -12,15 +12,16 @@ Fancybox.bind("[data-fancybox]", {
 });
 
 function filter(criteria) {
+
+  document.documentElement.setAttribute("gallery-filter", criteria);
+  localStorage.galleryFilter = criteria;
+
   $(".btn-filter").removeClass('btn-filter-active')
   $(".btn-filter").filter('[data-category="' + criteria + '"]').addClass("btn-filter-active")
 
   if (criteria == "All") {
     $(".gallery-container").show();
     $(".btn-filter").addClass("")
-
-
-
   } else {
     $(".gallery-container").hide();
     $(".gallery-container")
@@ -30,3 +31,5 @@ function filter(criteria) {
 
   }
 };
+
+

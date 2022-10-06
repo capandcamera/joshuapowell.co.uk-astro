@@ -1,0 +1,30 @@
+---
+import Layout from '../layouts/BaseLayout.astro';
+import json from '../assets/json/gallery.json'
+
+export async function getStaticPaths() {
+
+    return json['gallery']?.map(({project, caption, category, filename }) => {
+      const slug = "gallery/" + project
+      return {
+        params: { slug },
+        props: { caption, category, filename }
+      }
+    });
+}
+// All paginated data is passed on the "page" prop
+const { caption, category, filename } = Astro.props;
+---
+<Layout title={caption} description=''>
+  <a class="nav-link return-to-gallery" href="/gallery">
+    <i class="fa fa-arrow-left" aria-hidden="true"></i>
+    Return To Gallery
+  </a>
+  <div class="container text-center h-75">
+    <div class="gallery-container" data-category={category} data-fancybox data-src={'/assets/photos/' + filename}>
+      <img src={'/assets/photos/' + filename} class="image-content img-fluid">
+    </div>
+    <h1 class="image-header">{caption}</h1>
+    <p class="image-header">{category}</p>
+  </div>
+</Layout>

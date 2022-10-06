@@ -8,7 +8,7 @@ $color-secondary: #929aab;
 $color-background: #f7f7f7;
 
 $header-height: 50px;
-$footer-height: 30px;
+$footer-height: 40px;
 
 body {
     -webkit-transition-timing-function: ease;
@@ -28,10 +28,26 @@ body {
     font-family: $font-family-primary;
     color: $color-primary;
     background-color: $color-background;
-    font-weight: 700;
+    font-weight: 100;
     text-transform: uppercase;
     font-size: 1rem;
   }
+
+  .navbar-toggler {
+    border: none;
+    box-sizing: none;
+  }
+
+  .navbar-toggler-btn {
+    color: $color-secondary;
+  }
+
+  .navbar-toggler-btn:focus, .navbar-toggler-btn:hover {
+    box-shadow: none;
+    color: $color-primary !important;
+
+  }
+
   .nav-link {
     color: $color-secondary;
     font-weight: 100;
@@ -137,3 +153,23 @@ body {
   .alert-dark {
     background-color: $color-background !important;
   }
+
+  .return-to-gallery {
+    padding: 5px 15px;
+    font-family: $font-family-primary;
+    color: $color-primary;
+    font-weight: 100 !important;
+  }
+
+  .image-content {
+    max-width: 75%;
+    max-height: 50%;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 5px 1px rgba(146, 154, 171, 0.5);
+  }
+
+  .image-header {
+    font-family: $font-family-primary;
+    color: $color-primary;
+  }
+
