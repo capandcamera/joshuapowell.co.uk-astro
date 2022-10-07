@@ -33,3 +33,10 @@ function filter(criteria) {
 };
 
 
+function toggleCameraInfo() {
+  $(".camera-info-container").toggle()
+  $('#camera-info-toggle').toggleClass("fa-chevron-right")
+  $('#camera-info-toggle').toggleClass("fa-chevron-down")
+}
+
+

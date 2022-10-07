@@ -4,19 +4,32 @@ import json from '../assets/json/gallery.json'
 
 export async function getStaticPaths() {
 
-    return json['gallery']?.map(({project, caption, category, filename }) => {
+    return json['gallery']?.map(({
+        project,
+        caption,
+        category,
+        filename,
+        camera,
+        lens,
+        focallength,
+        iso,
+        shutterspeed,
+        aperture,
+        lighting,
+        composite
+      }) => {
       const slug = "gallery/" + project
       return {
         params: { slug },
-        props: { caption, category, filename }
+        props: { caption, category, filename, camera, lens, focallength, iso, shutterspeed, aperture, lighting, composite }
       }
     });
 }
 // All paginated data is passed on the "page" prop
-const { caption, category, filename } = Astro.props;
+const { caption, category, filename, camera, lens, focallength, iso, shutterspeed, aperture, lighting, composite } = Astro.props;
 ---
 <Layout title={caption} description=''>
-  <a class="nav-link return-to-gallery" href="/gallery">
+  <a class="nav-link return-to-gallery text-start" href="/gallery">
     <i class="fa fa-arrow-left" aria-hidden="true"></i>
     Return To Gallery
   </a>
@@ -26,5 +39,67 @@ const { caption, category, filename } = Astro.props;
     </div>
     <h1 class="image-header">{caption}</h1>
     <p class="image-header">{category}</p>
+
+    <br/>
+
+    <button class="btn-filter" onclick="toggleCameraInfo()">
+      More Info
+      <i id="camera-info-toggle" class="fa" aria-hidden="true"></i>
+    </button>
+
+
+
+    <div class="container-fluid camera-info-container">
+      <br/>
+      <br/>
+      <table class="table table-bordered table-striped">
+      <tr>
+        <td class="camera-info-table-header">Camera: </td>
+        <td class="camera-info-table-content">{camera}</td>
+      </tr>
+      <tr>
+        <td class="camera-info-table-header">Lens: </td>
+        <td class="camera-info-table-content">{lens}</td>
+      </tr>
+      <tr>
+        <td class="camera-info-table-header">Focal Length: </td>
+        <td class="camera-info-table-content">{focallength}</td>
+      </tr>
+      <tr>
+        <td class="camera-info-table-header">ISO: </td>
+        <td class="camera-info-table-content">{iso}</td>
+      </tr>
+      <tr>
+        <td class="camera-info-table-header">Shutter Speed: </td>
+        <td class="camera-info-table-content">{shutterspeed}</td>
+      </tr>
+      <tr>
+        <td class="camera-info-table-header">Aperture: </td>
+        <td class="camera-info-table-content">{aperture}</td>
+      </tr>
+      <tr>
+        <td class="camera-info-table-header">Lighting: </td>
+        <td class="camera-info-table-content">{lighting}</td>
+      </tr>
+      <tr>
+        <td class="camera-info-table-header">Composite: </td>
+        <td class="camera-info-table-content">
+          {composite === "" ?
+            "" :
+            composite === 'Yes' ?
+              <span><i class="fa fa-check" aria-hidden="true"></i> - Capture Information from Main Image</span>
+            :
+              <i class="fa fa-xmark" aria-hidden="true"></i>
+          }
+        </td>
+      </tr>
+
+    </table>
   </div>
+  </div>
+  <script>
+      $('.camera-info-container').hide()
+      $('#camera-info-toggle').addClass("fa-chevron-right")
+  </script>
+
 </Layout>

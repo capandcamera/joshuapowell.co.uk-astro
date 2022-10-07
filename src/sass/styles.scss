@@ -173,3 +173,20 @@ body {
     color: $color-primary;
   }
 
+  .camera-info-table {
+    text-align: center
+  }
+
+  .camera-info-table-header {
+    font-family: $font-family-primary;
+    color: $color-primary;
+    text-align: start;
+  }
+
+  .camera-info-table-content {
+    font-family: $font-family-primary;
+    color: $color-primary;
+    text-align: start;
+    font-weight: 100 !important;
+    padding-left: 50px;
+  }
